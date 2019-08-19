@@ -25,9 +25,9 @@ int main(int argc, char* argv[]){
 
     // Fake Sleep
     #if defined _WIN64 || defined _WIN32
-        Sleep(10);
+        Sleep(1123);
     #else
-        usleep(10);
+        usleep(1123);
     #endif
 
     end:
