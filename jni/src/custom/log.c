@@ -25,7 +25,7 @@ void debugLog_(const char* caller, char* format, ...){
 	va_list argptr;
     va_start(argptr, format);
     ssize_t bufsz = vsnprintf(NULL, 0, format, argptr);
-	msg = malloc(bufsz + 1);
+	msg = (char*)malloc(sizeof(char) *(bufsz + 1));
     vsnprintf(msg, bufsz + 1, format, argptr);
     va_end(argptr);
 
@@ -38,7 +38,7 @@ void infoLog_(const char* caller, char* format, ...){
 	va_list argptr;
     va_start(argptr, format);
     ssize_t bufsz = vsnprintf(NULL, 0, format, argptr);
-	msg = malloc(bufsz + 1);
+	msg = (char*)malloc(sizeof(char) *(bufsz + 1));
     vsnprintf(msg, bufsz + 1, format, argptr);
     va_end(argptr);
 	
@@ -51,7 +51,7 @@ void warningLog_(const char* caller, char* format, ...){
 	va_list argptr;
     va_start(argptr, format);
     ssize_t bufsz = vsnprintf(NULL, 0, format, argptr);
-	msg = malloc(bufsz + 1);
+	msg = (char*)malloc(sizeof(char) *(bufsz + 1));
     vsnprintf(msg, bufsz + 1, format, argptr);
     va_end(argptr);
 	
@@ -64,7 +64,7 @@ void errorLog_(const char* caller, char* format, ...){
 	va_list argptr;
     va_start(argptr, format);
     ssize_t bufsz = vsnprintf(NULL, 0, format, argptr);
-	msg = malloc(bufsz + 1);
+	msg = (char*)malloc(sizeof(char) *(bufsz + 1));
     vsnprintf(msg, bufsz + 1, format, argptr);
     va_end(argptr);
     
@@ -80,7 +80,7 @@ void criticalLog_(const char* caller, char* format, ...){
 	va_list argptr;
     va_start(argptr, format);
     ssize_t bufsz = vsnprintf(NULL, 0, format, argptr);
-	msg = malloc(bufsz + 1);
+	msg = (char*)malloc(sizeof(char) *(bufsz + 1));
     vsnprintf(msg, bufsz + 1, format, argptr);
     va_end(argptr);
 
